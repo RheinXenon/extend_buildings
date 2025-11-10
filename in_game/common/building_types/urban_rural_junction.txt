@@ -4,21 +4,33 @@
 
 urban_rural_junction = {
 	is_foreign = no
-	max_levels = urban_rural_junction_cap  # Dynamic cap based on population
+	
+	max_levels = {
+		add = {
+			desc = "BUILDING_LEVEL_BASE"
+			value = 1
+		}
+		add = {
+			desc = "BUILDING_LEVEL_DEVELOPMENT"
+			value = development
+			multiply = 0.1
+		}
+		add = {
+			desc = "BUILDING_LEVEL_POPULATION"
+			value = population
+			multiply = 0.05
+		}
+	}
+	
 	pop_type = peasants
 
 	category = infrastructure_category
-	employment_size = 250  # 250 workers per level
+	employment_size = tiny_rural_peasant_produce_employment  # tiny_rural_peasant_produce_employment = 250 workers per level
 	
 	# Only available in cities and towns, not rural settlements
 	rural_settlement = no
 	town = yes
 	city = yes
-
-	# Requires minimum population to build
-	location_potential = {
-		location_population > 1000
-	}
 	
 	build_time = infrastructure_build_time
 
@@ -29,9 +41,8 @@ urban_rural_junction = {
 
 	construction_demand = town_building_construction
 
-	# Each level adds 10 building slots
+	# Each level adds 10 free building levels (building slots)
 	modifier = {
-		local_building_slots = 10
+		free_building_levels = 10
 	}
 }
-
