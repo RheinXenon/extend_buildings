@@ -49,7 +49,6 @@ resident_office = {
 	# Level 2: 0.003 (raw) + 0.002*2 (scaled) = 0.7%
 	# Level 3: 0.003 (raw) + 0.002*3 (scaled) = 0.9%
 	modifier = {
-		local_population_growth = 0.002  # Additional 0.2% per level
 		local_disease_resistance = 0.03  # 3% per level, so 3%/6%/9% at levels 1/2/3
 	}
 	
