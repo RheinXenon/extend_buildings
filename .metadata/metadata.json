@@ -1,0 +1,17 @@
+{
+  "id": "extend_buildings",
+  "name": "Extend Buildings",
+  "version": "1.0.0",
+  "supported_game_version": "1.*.*",
+  "short_description": "扩展建筑类型",
+  "tags": [
+    "Buildings",
+    "Gameplay"
+  ],
+  "relationships": [],
+  "game_custom_data": {
+    "multiplayer_synchronized": true
+  }
+}
+
+
