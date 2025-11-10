@@ -1,0 +1,15 @@
+# Urban-Rural Junction Production Methods
+# 城乡结合部生产方式
+# Maintenance costs scale with building level
+
+urban_rural_junction_maintenance = {
+	# Resource consumption per level
+	# Level 1: 0.1 bricks + 0.1 tools
+	# Level 2: 0.2 bricks + 0.2 tools
+	# Level 3+: scales accordingly
+	masonry = 0.1   # Bricks for infrastructure
+	tools = 0.1     # Tools for maintenance
+	
+	category = building_maintenance
+}
+

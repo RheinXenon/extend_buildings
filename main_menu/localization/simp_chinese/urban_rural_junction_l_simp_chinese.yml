@@ -1,0 +1,12 @@
+﻿l_simp_chinese:
+ # Urban-Rural Junction Building - Chinese Localization
+ urban_rural_junction: "城乡结合部"
+ urban_rural_junction_desc: "这一建筑代表着城市与乡村交界处的过渡区域。这些区域具有较高的土地利用效率，可以支持更多建筑的建设。每级城乡结合部增加10个建筑槽位上限，允许更多样化的城市发展。"
+
+ # Production Methods
+ urban_rural_junction_maintenance: "城乡结合部维护"
+ urban_rural_junction_maintenance_desc: "基础设施维护需要石砖用于道路、地基等建设，工具用于日常维护和施工作业。"
+
+ # Script Values
+ BUILDING_LEVEL_POPULATION: "人口"
+ BUILDING_LEVEL_MINIMUM: "最低等级"

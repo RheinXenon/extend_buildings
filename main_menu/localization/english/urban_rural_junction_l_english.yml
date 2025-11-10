@@ -1,0 +1,12 @@
+﻿l_english:
+ # Urban-Rural Junction Building - English Localization
+ urban_rural_junction: "Urban-Rural Junction"
+ urban_rural_junction_desc: "This building represents the transitional zone between urban and rural areas. These areas have high land utilization efficiency and can support the construction of additional buildings. Each level of Urban-Rural Junction increases the building slots limit by 10, allowing for more diverse urban development."
+
+ # Production Methods
+ urban_rural_junction_maintenance: "Urban-Rural Junction Maintenance"
+ urban_rural_junction_maintenance_desc: "Basic infrastructure maintenance requiring bricks for roads and foundations, and tools for ongoing repairs and construction work."
+
+ # Script Values
+ BUILDING_LEVEL_POPULATION: "Population"
+ BUILDING_LEVEL_MINIMUM: "Minimum Level"
