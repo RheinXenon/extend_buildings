@@ -60,6 +60,8 @@ extend_buildings/
 │   │           └── buildings/
 │   │               └── resident_office.dds
 │   └── localization/
+│       ├── english/
+│       │   └── resident_office_l_english.yml
 │       └── simp_chinese/
 │           └── resident_office_l_simp_chinese.yml
 ├── README.md                  # 本文件
@@ -78,10 +80,20 @@ extend_buildings/
 - 不覆盖任何原版文件
 - 使用独立的建筑ID，不应与其他mod冲突
 
+## 本地化说明
+- 本地化文件使用 UTF-8 with BOM 编码（必需）
+- 已提供英文和简体中文本地化
+- 游戏会根据语言设置自动选择对应的翻译
+
 ## 已知问题
 无
 
 ## 版本历史
+- **v1.0.1** (2025-11-10)
+  - 修复本地化问题：添加英文本地化文件
+  - 更新所有本地化文件为UTF-8 with BOM编码
+  - 确保游戏正确显示建筑名称而非键名
+  
 - **v1.0.0** (2025-11-10)
   - 初始版本
   - 添加居民署建筑
