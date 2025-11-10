@@ -27,9 +27,15 @@ resident_office = {
 	}
 	
 
-	possible_production_methods = {
-		colony_maintenance
+	# 修正：原版使用unique_production_methods而不是possible_production_methods
+	unique_production_methods = {
+		colony_maintenance = {
+			# 如果colony_maintenance是一个已定义的生产方法，保持这样
+			# 否则你需要在这里定义具体的输入输出
+			category = building_maintenance
+		}
 	}
+	
 	construction_demand = colony_construction
 
 	
