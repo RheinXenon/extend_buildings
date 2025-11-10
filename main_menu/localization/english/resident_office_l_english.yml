@@ -1,15 +1,19 @@
 ﻿l_english:
  # Resident Office Building - English Localization
  resident_office: "Resident Office"
- resident_office_desc: "This building represents basic administrative management for established settlements. While not as actively attracting immigrants as colonial settlements, it provides necessary public services and basic facilities for local residents. Different service levels can better promote population growth."
+ resident_office_desc: "This building represents basic administrative management for established settlements. While not as actively attracting immigrants as colonial settlements, it provides necessary public services and basic facilities for local residents. Upgrading building levels provides better services and promotes population growth."
+ 
+ # Building Levels
+ resident_office_level_1: "Resident Office (Level 1) - Basic Resident Services"
+ resident_office_level_1_desc: "Provides basic administrative management and resident services.\nEffects: +0.5% population growth, +3% disease resistance\nUpkeep: 0.1 lumber, tools, and cloth each"
+ 
+ resident_office_level_2: "Resident Office (Level 2) - Improved Resident Services"
+ resident_office_level_2_desc: "Offers improved resident services through more equipment and better supplies.\nEffects: +0.7% population growth, +6% disease resistance\nUpkeep: 0.2 lumber, tools, and cloth each"
+ 
+ resident_office_level_3: "Resident Office (Level 3) - Advanced Population Management"
+ resident_office_level_3_desc: "Employs advanced population management solutions with comprehensive public services.\nEffects: +0.9% population growth, +9% disease resistance\nUpkeep: 0.3 lumber, tools, and cloth each"
  
  # Production Methods
- basic_resident_services: "Basic Resident Services"
- basic_resident_services_desc: "Provides basic administrative management and resident services, using lumber, tools, and cloth to maintain facilities and meet basic resident needs. Provides +0.5% additional population growth."
- 
- improved_resident_services: "Improved Resident Services"
- improved_resident_services_desc: "Offers improved resident services through more equipment and better supplies, significantly enhancing public facility quality. Provides +0.7% additional population growth and +5% disease resistance."
- 
- advanced_population_management: "Advanced Population Management"
- advanced_population_management_desc: "Employs advanced population management solutions with extensive high-quality facilities and tools, providing comprehensive public services. Provides +1.0% additional population growth and +8% disease resistance."
+ resident_office_maintenance: "Resident Office Maintenance"
+ resident_office_maintenance_desc: "Basic supplies required to maintain the resident office facilities. Resource consumption increases with building level."
 

@@ -1,10 +1,10 @@
 # Resident Office Building Mod
 # This file adds the Resident Office building to the game
-# Updated to use three different production methods for population management
+# Updated to use three building levels for different population management effects
 
 resident_office = {
 	is_foreign = no
-	max_levels = 1
+	max_levels = 3
 	pop_type = peasants
 
 	
@@ -28,11 +28,9 @@ resident_office = {
 	}
 	
 
-	# Three production methods for different service levels
+	# Single production method for maintenance (same for all levels)
 	possible_production_methods = {
-		basic_resident_services
-		improved_resident_services
-		advanced_population_management
+		resident_office_maintenance
 	}
 	
 	construction_demand = colony_construction
@@ -40,10 +38,19 @@ resident_office = {
 	
 	build_time = village_build_time
 	
-	# Base effect: 0.1% population growth
-	# Additional growth is provided by production methods
+	# Base effect (not scaled by level)
+	# Provides disease resistance that scales with level
+	raw_modifier = {
+		local_population_growth = 0.003  # Fixed 0.3% for all levels
+	}
+	
+	# Scaled effect (multiplied by building level)
+	# Level 1: 0.003 (raw) + 0.002*1 (scaled) = 0.5%
+	# Level 2: 0.003 (raw) + 0.002*2 (scaled) = 0.7%
+	# Level 3: 0.003 (raw) + 0.002*3 (scaled) = 0.9%
 	modifier = {
-		local_population_growth = 0.001
+		local_population_growth = 0.002  # Additional 0.2% per level
+		local_disease_resistance = 0.03  # 3% per level, so 3%/6%/9% at levels 1/2/3
 	}
 	
 }
