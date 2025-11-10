@@ -1,5 +1,6 @@
 # Resident Office Building Mod
 # This file adds the Resident Office building to the game
+# Updated to use three different production methods for population management
 
 resident_office = {
 	is_foreign = no
@@ -27,13 +28,11 @@ resident_office = {
 	}
 	
 
-	# 修正：原版使用unique_production_methods而不是possible_production_methods
-	unique_production_methods = {
-		colony_maintenance = {
-			# 如果colony_maintenance是一个已定义的生产方法，保持这样
-			# 否则你需要在这里定义具体的输入输出
-			category = building_maintenance
-		}
+	# Three production methods for different service levels
+	possible_production_methods = {
+		basic_resident_services
+		improved_resident_services
+		advanced_population_management
 	}
 	
 	construction_demand = colony_construction
@@ -41,8 +40,10 @@ resident_office = {
 	
 	build_time = village_build_time
 	
+	# Base effect: 0.1% population growth
+	# Additional growth is provided by production methods
 	modifier = {
-		local_population_growth = 0.01
+		local_population_growth = 0.001
 	}
 	
 }

@@ -1,5 +1,15 @@
 ﻿l_simp_chinese:
  # Resident Office Building - Chinese Localization
  resident_office: "居民署"
- resident_office_desc: "这一建筑代表着为已有一定规模的聚居地提供基础行政管理，虽然不像定居点那样积极吸引移民，但能为当地居民提供必要的公共服务和基本设施。"
+ resident_office_desc: "这一建筑代表着为已有一定规模的聚居地提供基础行政管理，虽然不像定居点那样积极吸引移民，但能为当地居民提供必要的公共服务和基本设施。通过不同的服务等级，可以更好地促进人口增长。"
+ 
+ # Production Methods
+ basic_resident_services: "基础居民服务"
+ basic_resident_services_desc: "提供基本的行政管理和居民服务，使用木材、工具和布料维护设施并满足居民基本需求。提供+0.5%额外人口增长。"
+ 
+ improved_resident_services: "改进居民服务"
+ improved_resident_services_desc: "通过更多的设备和更好的物资提供改进的居民服务，显著提升公共设施质量。提供+0.7%额外人口增长和+5%疾病抗性。"
+ 
+ advanced_population_management: "高级人口管理"
+ advanced_population_management_desc: "采用先进的人口管理方案，使用大量高质量设施和工具，提供全面的公共服务。提供+1.0%额外人口增长和+8%疾病抗性。"
 

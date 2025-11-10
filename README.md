@@ -1,111 +1,66 @@
 # 居民署建筑扩展 (Resident Office Building Mod)
 
 ## 简介
-这个mod为《欧陆风云5》添加了居民署建筑，为已有一定规模的聚居地提供基础行政管理服务。
+
+为《欧陆风云5》添加居民署建筑，提供基础行政管理服务，支持三种生产方式调节人口增长。
 
 ## 建筑特性
-- **名称**: 居民署 (Resident Office)
-- **类型**: 基础设施建筑
-- **最大等级**: 1级
-- **人口类型**: 农民 (peasants)
-- **建造时间**: 村庄建造时间
-- **适用地点**: 农村定居点、城镇、城市
 
-## 建造条件
-- 地区人口比例 < 60%
-- 当地区人口比例超过60%时自动移除
+- **建造条件**: 地区人口比例 < 60%
+- **基础效果**: +0.1% 人口增长
+- **类型**: 基础设施建筑（1级，农民工作）
 
-## 效果
-- 本地人口增长: +0.01 (+1%)
+## 生产方式对比
+
+| 生产方式               | 资源消耗                    | 额外效果               | 总人口增长     |
+| ---------------------- | --------------------------- | ---------------------- | -------------- |
+| **基础居民服务** | 木材0.1, 工具0.1, 布料0.1   | +0.4%增长              | **0.5%** |
+| **改进居民服务** | 木材0.1, 工具0.2, 布料0.15  | +0.6%增长, +5%疾病抗性 | **0.7%** |
+| **高级人口管理** | 木材0.15, 工具0.3, 布料0.25 | +0.9%增长, +8%疾病抗性 | **1.0%** |
 
 ## 安装方法
 
-### 本地开发模式（推荐）
-1. 将整个 `extend_buildings` 文件夹复制到：
+1. 复制 `extend_buildings` 文件夹到：
    ```
    Documents/Paradox Interactive/Europa Universalis V/mod/
    ```
+2. 在游戏mod管理器中启用
 
-2. 启动游戏，在mod管理器中启用此mod
+## 重要技术说明
 
-### 当前位置（仅供测试）
-当前mod位于游戏安装目录下，这不是推荐的使用位置，因为游戏更新可能会覆盖这些文件。
+### 生产方式modifier验证
 
-## 开发调试
+⚠️ **关键测试点**: 游戏原版未见生产方式使用modifier的先例，需验证是否生效：
 
-### 启用调试模式
-在Steam中右键游戏 -> 属性 -> 启动选项，添加：
-```
--debug_mode
-```
+- **如果生效**: 三种方式提供0.5%、0.7%、1.0%不同增长
+- **如果不生效**: 所有方式均为0.1%基础增长，仅资源消耗有差异
 
-### 查看错误日志
-错误日志位置：
-```
-Documents/Paradox Interactive/Europa Universalis V/logs/error.log
-```
+### 测试步骤
 
-## 文件结构
+1. 建造居民署，切换不同生产方式
+2. 记录人口增长率和疾病抗性数值
+3. 检查 `Documents/Paradox Interactive/Europa Universalis V/logs/error.log`
+
+### 文件结构
+
 ```
 extend_buildings/
-├── .metadata/
-│   └── metadata.json          # Mod元数据（必需）
-├── in_game/                   # 游戏内容顶层目录（必需）
-│   ├── common/
-│   │   └── building_types/
-│   │       └── resident_office.txt
-│   ├── gfx/
-│   │   └── interface/
-│   │       └── icons/
-│   │           └── buildings/
-│   │               └── resident_office.dds
-│   └── localization/
-│       ├── english/
-│       │   └── resident_office_l_english.yml
-│       └── simp_chinese/
-│           └── resident_office_l_simp_chinese.yml
-├── README.md                  # 本文件
-└── 修改说明.md               # 结构修正详细说明
+├── in_game/common/
+│   ├── building_types/resident_office.txt
+│   └── production_methods/resident_office_production_methods.txt
+└── main_menu/localization/
+    ├── english/resident_office_l_english.yml
+    └── simp_chinese/resident_office_l_simp_chinese.yml
 ```
 
-## 技术说明
-
-### 生产方法
-建筑使用 `colony_maintenance` 作为维护方法。如果游戏中不存在这个生产方法ID，你需要：
-1. 在 `in_game/common/production_methods/` 下创建定义文件
-2. 或者在建筑定义中直接指定资源输入输出
-
-### 兼容性
-- 支持游戏版本: 1.0.*（所有1.0.x版本）
-- 不覆盖任何原版文件
-- 使用独立的建筑ID，不应与其他mod冲突
-
-## 本地化说明
-- 本地化文件使用 UTF-8 with BOM 编码（必需）
-- 已提供英文和简体中文本地化
-- 游戏会根据语言设置自动选择对应的翻译
-
-## 已知问题
-无
-
 ## 版本历史
-- **v1.0.1** (2025-11-10)
-  - 修复本地化问题：添加英文本地化文件
-  - 更新所有本地化文件为UTF-8 with BOM编码
-  - 确保游戏正确显示建筑名称而非键名
-  
-- **v1.0.0** (2025-11-10)
-  - 初始版本
-  - 添加居民署建筑
-  - 修正mod目录结构符合官方规范
 
-## 许可证
-此mod可自由使用和修改。
+- **v2.0.0** (2025-11-10) - 添加三种生产方式系统
+- **v1.0.1** (2025-11-10) - 修复本地化UTF-8 with BOM编码
+- **v1.0.0** (2025-11-10) - 初始版本
 
-## 反馈
-如有问题或建议，请检查error.log文件中的错误信息。
+## 兼容性
 
-## 参考资源
-- [EU5 Mod Structure Wiki](官方维基链接)
-- [EU5 Modding Wiki](官方维基链接)
-
+- 游戏版本: 1.0.*
+- 不覆盖原版文件
+- 本地化: UTF-8 with BOM编码

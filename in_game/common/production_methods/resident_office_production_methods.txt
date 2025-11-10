@@ -1,0 +1,41 @@
+# Resident Office Production Methods
+# Three different service levels for population management
+
+basic_resident_services = {
+	lumber = 0.1
+	tools = 0.1
+	cloth = 0.1
+	
+	modifier = {
+		local_population_growth = 0.004
+	}
+	
+	category = building_maintenance
+}
+
+improved_resident_services = {
+	lumber = 0.1
+	tools = 0.2
+	cloth = 0.15
+	
+	modifier = {
+		local_population_growth = 0.006
+		local_disease_resistance = 0.05
+	}
+	
+	category = building_maintenance
+}
+
+advanced_population_management = {
+	lumber = 0.15
+	tools = 0.3
+	cloth = 0.25
+	
+	modifier = {
+		local_population_growth = 0.009
+		local_disease_resistance = 0.08
+	}
+	
+	category = building_maintenance
+}
+
